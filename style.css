@@ -1,0 +1,224 @@
+/*  */
+/* データを読み込む */
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url("https://fonts.googleapis.com/earlyaccess/nicomoji.css");
+@import url("https://fonts.googleapis.com/earlyaccess/nikukyu.css");
+
+/* セレクタ {
+    font-family: "Noto Sans Japanese";  /* フォントを指定 */
+/* font-family: "Nico Moji"; */
+/*  font-family: "Nikukyu";*/
+
+#openModal{
+  font-size: 20px;
+  background-color: rgb(7, 7, 7);
+  border:none;
+  color: gold;
+
+font-family: "Noto Sans Japanese";
+
+}
+
+
+
+
+
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  text-align: center;
+  font-family: "Trebuchet MS" , Tahoma, Arial, sans-serif;
+  color:#333;
+  text-shadow: 0 1px 0 #fff;
+  margin: 50px 0;
+}
+
+
+/* button{
+  position: relative;
+  left: 10%;
+  font-size: 30px;
+  background-color: bisque;
+} */
+
+#hidari{
+  margin: 20px;
+}
+
+#naka{
+  margin: 20px;
+}
+
+#migi{
+  margin: 20px;
+}
+#kaishi {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  background-image: linear-gradient(top, #fff, #f0f0f0);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  color: #666;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  &:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  &:active {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  }
+  
+}
+#toziru {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  background-image: linear-gradient(top, #fff, #f0f0f0);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  color: #666;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  &:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  &:active {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  }
+  
+}
+
+.modal-content button {
+   text-align: center;
+   
+}
+
+html.body{
+  background-image:url(http://theartmad.com/wp-content/uploads/Dark-Grey-Texture-Wallpaper-5.jpg);
+  &.modal-active {
+    overflow: hidden;
+  }
+}
+
+.my-custom-class{
+  font-size: 40px;
+  color: black;
+  text-shadow: 
+        -1px -1px 0 white, /* 左上 */
+         1px -1px 0 white, /* 右上 */
+        -1px  1px 0 white, /* 左下 */
+         1px  1px 0 white; /* 右下 */
+  font-family: "Noto Sans Japanese";
+  background-color: rgb(151, 202, 130);
+  text-align: center;
+}
+
+#motiten{
+  font-family: "Noto Sans Japanese";
+  text-align: right;
+  font-size: 40px;
+  color: white;
+
+  
+}
+
+body{
+ background-image: url(img/MJ_kyoudasuru15134846.jpg); 
+ background-size: cover; /* 画像を要素全体に広げる */
+    background-position: center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効にする */
+}
+
+header{
+  font-family: "Noto Sans Japanese";
+  text-align: center;
+  font-size: 80px;
+  color: white;
+}
+
+#messageBox {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#messageBox{
+  font-size: 200px;
+  font-family: "Nico Moji";
+  text-align: center;
+  color: white;
+}
+
+#messageBox_ri-chi{
+  display: none;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+
+
+}
+
+#messageBox_ri-chi{
+  font-size: 200px;
+  font-family: "Nico Moji";
+  text-align: center;
+  color: white;
+}
+
+#messageBox_safe{
+  display: none;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+
+
+}
+
+#messageBox_safe{
+  font-size: 200px;
+  font-family: "Nico Moji";
+  text-align: center;
+  color: white;   
+
+
+}

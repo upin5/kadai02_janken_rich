@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+   
+    <title>MJ</title>
+    <style>
+ 
+      /* モーダルのスタイル */
+    
+      .modal {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+          font-family:  Arial, sans-serif;
+          
+      
+          
+      }
+
+      .modal-content {
+          background-color: #fff;
+          width: 80%;
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          position: relative;
+          text-align: center;
+          font-weight: bold;
+      }
+
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<header>勝負の一打「これさえ通れば！」</header>
+
+<div class="hai_ura">
+    <ul id="hai_ura_images">
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+        <li><img src="img/mah1.gif"></li>
+    </ul>
+</div>
+
+<div class="ataript_1">
+    <ul id="atari_aka_u_sou">
+        <li id="a1" class="aka-image" style="display: none;" data-value="0"><img src="img/so1.gif"></li>
+        <li id="a2" class="aka-image" style="display: none;" data-value="0"><img src="img/so2.gif"></li>
+        <li id="a3" class="aka-image" style="display: none;" data-value="0"><img src="img/so3.gif"></li>
+        <li id="a4" class="aka-image" style="display: none;" data-value="0"><img src="img/pin2.gif"></li>
+        <li id="a5" class="aka-image" style="display: none;" data-value="0"><img src="img/pin2.gif"></li>
+        <li id="a6" class="aka-image" style="display: none;" data-value="0"><img src="img/pin3.gif"></li>
+        <li id="a7" class="aka-image" style="display: none;" data-value="0"><img src="img/pin4.gif"></li>
+        <li id="a8" class="aka-image" style="display: none;" data-value="0"><img src="img/pin5.gif"></li>
+        <li id="a9" class="aka-image" style="display: none;" data-value="0"><img src="img/man2.gif"></li>
+        <li id="a10" class="aka-image" style="display: none;" data-value="0"><img src="img/man3.gif"></li>
+        <li id="a11" class="aka-image" style="display: none;" data-value="0"><img src="img/man4.gif"></li>
+        <li id="a12" class="aka-image" style="display: none;" data-value="0"><img src="img/so6.gif"></li>
+        <li id="a13" class="aka-image" style="display: none;" data-value="0"><img src="img/so7.gif"></li>
+    </ul>
+
+    <ul id="atari_ti_pin">
+        <li id="b1" class="tipin-image" style="display: none;" data-value="1"><img src="img/so7.gif"></li>
+        <li id="b2" class="tipin-image" style="display: none;" data-value="1"><img src="img/so8.gif"></li>
+        <li id="b3" class="tipin-image" style="display: none;" data-value="1"><img src="img/so9.gif"></li>
+        <li id="b4" class="tipin-image" style="display: none;" data-value="1"><img src="img/man7.gif"></li>
+        <li id="b5" class="tipin-image" style="display: none;" data-value="1"><img src="img/man8.gif"></li>
+        <li id="b6" class="tipin-image" style="display: none;" data-value="1"><img src="img/man9.gif"></li>
+        <li id="b7" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin2.gif"></li>
+        <li id="b8" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin3.gif"></li>
+        <li id="b9" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin4.gif"></li>
+        <li id="b10" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin5.gif"></li>
+        <li id="b11" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin5.gif"></li>
+        <li id="b12" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin8.gif"></li>
+        <li id="b13" class="tipin-image" style="display: none;" data-value="1"><img src="img/pin9.gif"></li>
+
+    </ul>
+    <ul id="atari_ryan_pin">
+        <li id="c1" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so1.gif"></li>
+        <li id="c2" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so2.gif"></li>
+        <li id="c3" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so3.gif"></li>
+        <li id="c4" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so7.gif"></li>
+        <li id="c5" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so8.gif"></li>
+        <li id="c6" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/so9.gif"></li>
+        <li id="c7" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/man7.gif"></li>
+        <li id="c8" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/man8.gif"></li>
+        <li id="c9" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/man9.gif"></li>
+        <li id="c10" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/ma7.gif"></li>
+        <li id="c11" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/ma7.gif"></li>
+        <li id="c12" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/pin1.gif"></li>
+        <li id="c13" class="ryanpin-image" style="display: none;" data-value="2"><img src="img/pin3.gif"></li>
+    </ul>
+
+</div>
+
+
+
+<button id="openModal">勝負をスタートする</button>
+
+<div id="messageBox_ri-chi"></div>
+<div id="messageBox"></div>
+<div id="messageBox_safe"></div>
+
+
+<audio id="audioElement_agari" src="sd/audio_11546.wav"></audio>
+<audio id="audioElement_ri-chi" src="sd/audio_11759.wav"></audio>
+
+
+<!-- モーダルウィンドウ本体 -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h1>ゲームのルール</h1>
+        <p>対局開始をクリックすると、相手からリーチがかかります。あなたは手牌に全く安全牌がありません。勘で捨て牌を決めてください。運が良ければ回避できます。</p>
+        <button id="kaishi" aria-posinset="1">対局開始
+          </button>
+          <!-- 対局開始をクリックするとウィンドウが閉じた後に音が出るようにする -->
+        <button id="toziru">諦める</button>
+    </div>
+</div>
+<p id="counterText"></p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="mj.js"></script>
+  <!-- <script src="/mj.js"></script> -->
+  <script>
+    // モーダルを開く
+        $("#openModal").click(function () {
+            $("#myModal").css("display", "block");
+        });
+//         $(".tehai #sutehai_1 li").click(function () {
+//     var clickedNumber = $(this).data("value");
+//         randomValue = Math.floor(Math.random() * 3);
+
+//     if (randomValue === clickedNumber) {
+//         switchImages(clickedNumber);
+//         console.log(clickedNumber);
+//         console.log(switchImages);
+//     }
+// });
+
+// // 変数に応じて画像を切り替える関数
+//     function switchImages(imageIndex) {
+//     console.log(imageIndex);
+//     // すべての .ataript_1 ul を非表示にする
+//     // $(".ataript_1 ul").hide();
+
+//     // 固有数に応じて対応する ul を表示
+//     if (imageIndex === 0) {
+
+//         $(".aka-image").show();
+//         // $("#hai_ura_images").appendTo(".aka-image").show();
+        
+//     } else if (imageIndex === 1) {
+//         $("#atari_ti_pin").show();
+//     } else if (imageIndex === 2) {
+//         $("#atari_ryan_pin").show();
+//     }
+// }
+  
+
+    $(document).ready(function(){
+        var clickCount = 0;
+        console.log(clickCount);
+        var randomValue = null;
+
+        $(".ataript_1 ul li").each(function(index){
+            $(this).data("value",index)
+        });
+
+        $("#kaishi").click(function() {
+            $("#myModal").css("display","none");
+
+            var audio = document.getElementById("audioElement_ri-chi");
+        audio.play();
+
+        var messageBox = document.getElementById("messageBox_ri-chi");
+        messageBox.textContent = "リーチ！";
+        messageBox.style.display = "block";
+
+        // 1秒後にテキストを非表示にする
+        setTimeout(function () {
+            messageBox.style.display = "none";
+        }, 1000);
+       
+       
+       
+
+            // クリックカウント
+            clickCount++;
+
+            // クリックカウントに応じたテキスト表示
+            var textToShow = "";
+
+            // クリック回数が9回目以降になると勝負を～の表示で固定になる問題
+            switch (clickCount){
+                case 0:
+                    textToShow = "勝負をスタートするをクリック";
+                    break;
+                case 1:
+                    textToShow = "東1局";
+                    break;
+                case 2:
+                    textToShow = "東2局";
+                    break;
+                case 3:
+                    textToShow = "東3局";
+                    break;
+                case 4:
+                    textToShow = "東4局";
+                    break;
+                case 5:
+                    textToShow = "南1局";
+                    break;
+                case 6:
+                    textToShow = "南2局";
+                    break;
+                case 7:
+                    textToShow = "南3局";
+                    break;
+                case 8:
+                    textToShow = "オーラス"
+                    break;
+
+                default:
+                    textToShow = "勝負をスタートするをクリックする";
+            }
+
+           $("#counterText").text(textToShow).addClass("my-custom-class");
+          
+          
+           //クリック回数に応じた画像表示部分
+           if(clickCount === 1){
+           $(".image-container").show();
+           }else{
+            $(".image-container").hide();
+           }
+           $("#toziru").click(function() {
+             clickCount = 0;
+            $("#myModal").css("display","none");
+            $("#counterText").text("勝負をスタートするをクリックする") ;
+            // $(".ataript_1 ul").hide();
+
+            $(".image-container").hide();
+            }); 
+           // モーダルを閉じる
+            $("#closeModal").click(function () {
+            $("#myModal").css("display", "none");
+            });
+        });
+    
+       
+
+           
+            //クリックして変数をランダム演算する命令
+            $(".tehai #sutehai_1 li").click(function () {
+    var clickedNumber = $(this).data("value");
+        randomValue = Math.floor(Math.random() * 3);
+
+    if (randomValue === clickedNumber) {
+       
+        var audio = document.getElementById("audioElement_agari");
+        audio.play();
+       
+        var messageBox = document.getElementById("messageBox");
+        messageBox.textContent = "ロン！";
+        messageBox.style.display = "block";
+
+        // 1秒後にテキストを非表示にする
+        setTimeout(function () {
+            messageBox.style.display = "none";
+        }, 1000);
+       
+        switchImages(clickedNumber);
+        console.log(clickedNumber);
+        console.log(switchImages);
+
+       
+        // 一致が起きた場合に音声が出るようにする
+    } else {
+
+        var messageBox = document.getElementById("messageBox_safe");
+        messageBox.textContent = "通し！"; // 一致しなかった場合のテキストを設定
+
+        // テキストを表示
+        messageBox.style.display = "block";
+
+        // 1秒後にテキストを非表示にする
+        setTimeout(function () {
+            messageBox.style.display = "none";
+        }, 1000);
+    }
+
+});
+    
+        
+    }
+
+);
+
+// 変数に応じて画像を切り替える関数
+    function switchImages(imageIndex) {
+    console.log(imageIndex);
+    // すべての .ataript_1 ul を非表示にする
+    // $(".ataript_1 ul").hide();
+
+    // 固有数に応じて対応する ul を表示
+    if (imageIndex === 0) {
+
+        $(".aka-image").show();
+    } else if (imageIndex === 1) {
+        $(".tipin-image").show();
+    } else if (imageIndex === 2) {
+        $(".ryanpin-image").show();
+    }
+}
+
+
+    ;
+   
+    //勝負をスタートするをクリックすると前の当たり画像が消えるようにする動作追加 だけどうまくいかないので保留
+    //一旦cssに手を入れる
+
+
+    //click===2で東2局へ移行する動作追加 or 1回目の動作を全て終了したときに強制的にモーダル呼び出しで2局目へ移行する動作かどっちか。モーダルのほうがうまくいきそうなイメージ。
+
+    //リーチの発声後にBGM流したい
+
+</script>
+
+<!-- ↓クリックするとランダム関数動くトリガー -->
+
+<div class="tehai">
+    <ul id="sutehai_1">
+    <li id="hidari" class="image-container" style="display: none;" data-value="0">
+        <img src="img/akahai4.gif" alt="画像1" width="160px" height="240px">
+    </li>
+    <li id="naka" class="image-container" style="display: none;" data-value="1">
+        <img src="img/pin7.gif" alt="画像2" width="160px" height="240px">
+    </li>
+    <li id="migi" class="image-container" style="display: none;" data-value="2">
+        <img src="img/pin2.gif" alt="画像3" width="160px" height="240px"></li>
+    </ul>
+
+</div>
+
+<div id="motiten">
+    <p>持ち点: 25000 点</p>
+
+
+
+
+</div>
+ 
+
+
+</body>
